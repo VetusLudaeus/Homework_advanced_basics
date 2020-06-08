@@ -48,7 +48,7 @@ def get_log_lines(log_path):
     if log_path.endswith('.gz'):
         log = gzip.open(log_path, mode='rt', encoding='utf-8')
     else:
-        log = open(log_path)
+        log = open(log_path, encoding='utf-8')
 
     for line in log:
         yield line
